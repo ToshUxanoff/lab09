@@ -20,7 +20,7 @@ $ export GITHUB_USERNAME=Toshuxanoff
 $ export GITHUB_EMAIL=tosha.uhanoff@yandex.ru
 $ alias edit=nano
 ```
-
+Инициализация директории для новой лабораторной работы
 ```ShellSession
 $ mkdir lab03 && cd lab03  #создание директории и переход в неё
 $ git init	#создание локального репозитория
@@ -44,16 +44,20 @@ $ git push origin master 	#пуш данных в репозиторий
 *install*/
 *.swp
 ```
-
+Получение изменений
 ```ShellSession
 $ git pull origin master	 #получение данных из репозитория
 $ git log			#получение истории коммитов
 ```
-
+Создание директорий для проекта
 ```ShellSession
 $ mkdir sources       #создание директории для файлов исходного кода
 $ mkdir include				#создание директории для заголовочных файлов
 $ mkdir examples      #создание директории для примеров
+```
+
+Заполнение файла исходного кода
+```ShellSession
 $ cat > sources/print.cpp <<EOF		
 #include <print.hpp>
 
@@ -64,9 +68,9 @@ void print(const std::string& text, std::ostream& out) {
 void print(const std::string& text, std::ofstream& out) {
   out << text;
 }
-EOF                  #заполнение файла исходного кода
+EOF                  
 ```
-
+Заполнение заголовочного файла
 ```ShellSession
 $ cat > include/print.hpp <<EOF
 #include <string>
@@ -75,9 +79,9 @@ $ cat > include/print.hpp <<EOF
 
 void print(const std::string& text, std::ostream& out = std::cout);
 void print(const std::string& text, std::ofstream& out);
-EOF              #заполнение заголовочного файла
+EOF              
 ```
-
+Заполнение файла с примером 1
 ```ShellSession
 $ cat > examples/example1.cpp <<EOF
 #include <print.hpp>
@@ -85,9 +89,9 @@ $ cat > examples/example1.cpp <<EOF
 int main(int argc, char** argv) {
   print("hello");
 }
-EOF               #заполнение файла с примером 1
+EOF               
 ```
-
+Заполнение файла с примером 2
 ```ShellSession
 $ cat > examples/example2.cpp <<EOF
 #include <fstream>
@@ -97,13 +101,13 @@ int main(int argc, char** argv) {
   std::ofstream file("log.txt");
   print(std::string("hello"), file);
 }
-EOF              #заполнение файла с примером 2
+EOF              
 ```
-
+Редактирование README.md с помощью nano
 ```ShellSession
 $ edit README.md		
 ```
-
+Пуш изменений в репозиторий
 ```ShellSession
 $ git status			#состояние новых файлов
 $ git add .	
