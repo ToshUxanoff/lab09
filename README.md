@@ -53,7 +53,7 @@ $ git log			#получение истории коммитов
 ```ShellSession
 $ mkdir sources       #создание директории для файлов исходного кода
 $ mkdir include				#создание директории для заголовочных файлов
-$ mkdir examples      #создание кода для примеров
+$ mkdir examples      #создание директории для примеров
 $ cat > sources/print.cpp <<EOF		
 #include <print.hpp>
 
