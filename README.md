@@ -51,10 +51,10 @@ $ git log			#получение истории коммитов
 ```
 
 ```ShellSession
-$ mkdir sources
-$ mkdir include				#создание директорий
-$ mkdir examples
-$ cat > sources/print.cpp <<EOF		#редактирование файла
+$ mkdir sources       #создание директории для файлов исходного кода
+$ mkdir include				#создание директории для заголовочных файлов
+$ mkdir examples      #создание кода для примеров
+$ cat > sources/print.cpp <<EOF		
 #include <print.hpp>
 
 void print(const std::string& text, std::ostream& out) {
@@ -64,7 +64,7 @@ void print(const std::string& text, std::ostream& out) {
 void print(const std::string& text, std::ofstream& out) {
   out << text;
 }
-EOF
+EOF                  #заполнение файла исходного кода
 ```
 
 ```ShellSession
@@ -75,7 +75,7 @@ $ cat > include/print.hpp <<EOF
 
 void print(const std::string& text, std::ostream& out = std::cout);
 void print(const std::string& text, std::ofstream& out);
-EOF
+EOF              #заполнение заголовочного файла
 ```
 
 ```ShellSession
@@ -85,7 +85,7 @@ $ cat > examples/example1.cpp <<EOF
 int main(int argc, char** argv) {
   print("hello");
 }
-EOF
+EOF               #заполнение файла с примером 1
 ```
 
 ```ShellSession
@@ -97,7 +97,7 @@ int main(int argc, char** argv) {
   std::ofstream file("log.txt");
   print(std::string("hello"), file);
 }
-EOF
+EOF              #заполнение файла с примером 2
 ```
 
 ```ShellSession
