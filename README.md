@@ -1,4 +1,3 @@
-# Lab03 
 ## Laboratory work III
 
 Данная лабораторная работа посвещена изучению систем контроля версий на примере **Git**.
@@ -17,24 +16,24 @@ $ open https://git-scm.com
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GITHUB_EMAIL=<адрес_почтового_ящика>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=Toshuxanoff
+$ export GITHUB_EMAIL=tosha.uhanoff@yandex.ru
+$ alias edit=nano
 ```
 
 ```ShellSession
-$ mkdir lab03 && cd lab03
-$ git init
-$ git config --global user.name ${GITHUB_USERNAME}
+$ mkdir lab03 && cd lab03  #создание директории и переход в неё
+$ git init	#создание локального репозитория
+$ git config --global user.name ${GITHUB_USERNAME}	#первоначальная настройка данных пользователя
 $ git config --global user.email ${GITHUB_EMAIL}
 $ git config -e --global
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03
-$ git pull origin master
-$ touch README.md
-$ git status
-$ git add README.md
-$ git commit -m"added README.md"
-$ git push origin master
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03 #добавление удаленного репозитория
+$ git pull origin master	 #получение данных
+$ touch README.md	 #создание файла
+$ git status 	#определение состояния файлов (отслеживаемые или нет)
+$ git add README.md	#добавление файла в версионный контроль (отслеживание)
+$ git commit -m"added README.md"	#коммит с комментарием
+$ git push origin master 	#пуш данных в репозиторий
 ```
 
 Добавить на сервисе **GitHub** в репозитории **lab03** файл **.gitignore**
@@ -47,15 +46,15 @@ $ git push origin master
 ```
 
 ```ShellSession
-$ git pull origin master
-$ git log
+$ git pull origin master	 #получение данных из репозитория
+$ git log			#получение истории коммитов
 ```
 
 ```ShellSession
 $ mkdir sources
-$ mkdir include
+$ mkdir include				#создание директорий
 $ mkdir examples
-$ cat > sources/print.cpp <<EOF
+$ cat > sources/print.cpp <<EOF		#редактирование файла
 #include <print.hpp>
 
 void print(const std::string& text, std::ostream& out) {
@@ -102,13 +101,13 @@ EOF
 ```
 
 ```ShellSession
-$ edit README.md
+$ edit README.md		
 ```
 
 ```ShellSession
-$ git status
-$ git add .
-$ git commit -m"added sources"
+$ git status			#состояние новых файлов
+$ git add .	
+$ git commit -m"added sources"		#коммит новых файлов
 $ git push origin master
 ```
 
@@ -132,3 +131,6 @@ $ gistup -m "lab${LAB_NUMBER}"
 - [Gitlab](https://about.gitlab.com)
 - [LearnGitBranching](http://learngitbranching.js.org/)
 
+```
+Copyright (c) 2017 Братья Вершинины
+```
