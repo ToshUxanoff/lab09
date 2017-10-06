@@ -84,14 +84,107 @@ $ git push origin master
 Используем комманды тревиса 
 ```ShellSession
 $ travis lint
+Warnings for .travis.yml:
+[x] value for addons section is empty, dropping
+[x] in addons section: unexpected key apt, dropping
 $ travis accounts  #показывает соединенные с ним GitHub аккаунты
+ToshUxanoff (Уханов Антон): subscribed, 24 repositories
 $ travis sync       #синхронизация
+synchronizing: . done
 $ travis repos        #отображение репозиториев и их статуса(связаны ли они с Travis)
+ToshUxanoff/3_semester_labs (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Course-Prorject (active: no, admin: yes, push: yes, pull: yes)
+Description: Hybrid-p2p chat
+
+ToshUxanoff/GatesToHell-HW2- (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/HW1-Set (active: no, admin: yes, push: yes, pull: yes)
+Description: Caution!
+
+ToshUxanoff/Lab-1-2-mod- (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab-2.1 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab-3.1 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab-5 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab03 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab2-2mod (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab3.-2Mod (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab4 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab4_mod2 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab5_2mod (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab6 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Lab7 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/TaMoP (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/Test-for-Go-2017-park.mail.ru- (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/TestRep (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/beginner-cpp-course-bmstu (active: no, admin: yes, push: yes, pull: yes)
+Description: Second semester of course: Programming Languages
+
+ToshUxanoff/lab04 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/lab05 (active: yes, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/lab1.1 (active: no, admin: yes, push: yes, pull: yes)
+Description: TString
+
+ToshUxanoff/labs4 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+ToshUxanoff/labs6 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
 $ travis enable         # "включить" travis в текущей директории
+Detected repository as ToshUxanoff/lab05, is this correct? |yes| 
+ToshUxanoff/lab05: enabled :)
 $ travis whatsup          #показывает пройденные шаги
+ToshUxanoff/lab05 passed: #3
 $ travis branches           #показывает сделанные шаги на ветке master 
-$ travis history           #показывает всю историю изменений и их состояние    
+master:  #3    passed     added CI
+$ travis history           #показывает всю историю изменений и их состояние   
+#3 passed:       master added CI
 $ travis show           #показывает всю информацию
+State:         passed
+Type:          push
+Branch:        master
+Compare URL:   https://github.com/ToshUxanoff/lab05/compare/20b563325bbd...4f0dc1c1
+Duration:      29 sec
+Started:       2017-10-06 13:32:24
+Finished:      2017-10-06 13:32:53
+Allow Failure: false
+Config:        os: linux
 ```
 
 ## Report
