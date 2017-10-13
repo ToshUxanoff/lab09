@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ToshUxanoff/lab05.svg?branch=master)](https://travis-ci.org/ToshUxanoff/lab05)
+[![Build Status](https://travis-ci.org/ToshUxanoff/lab06.svg?branch=master)](https://travis-ci.org/ToshUxanoff/lab06)
 ## Laboratory work V
 
 Данная лабораторная работа посвещена изучению систем непрерывной интеграции на примере сервиса **Travis CI**
@@ -10,7 +10,7 @@ $ open https://travis-ci.org
 ## Tasks
 
 - [x] 1. Авторизоваться на сервисе **Travis CI** с использованием **GitHub** аккаунта
-- [x] 2. Создать публичный репозиторий с названием **lab05** на сервисе **GitHub**
+- [x] 2. Создать публичный репозиторий с названием **lab06** на сервисе **GitHub**
 - [x] 3. Ознакомиться со ссылками учебного материала
 - [x] 4. Включить интеграцию сервиса **Travis CI** с созданным репозиторием
 - [x] 5. Получить токен для **Travis CLI** с правами **repo** и **user**
@@ -26,12 +26,12 @@ $ open https://travis-ci.org
 $ export GITHUB_USERNAME=<имя_пользователя>
 $ export GITHUB_TOKEN=<полученный_токен>
 ```
-Клонирование репозитория lab04 в новый lab05
+Клонирование репозитория lab04 в новый lab06
 ```ShellSession
-$ git clone https://github.com/${GITHUB_USERNAME}/lab04 lab05
-$ cd lab05
+$ git clone https://github.com/${GITHUB_USERNAME}/lab04 lab06
+$ cd lab06
 $ git remote remove origin
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab05
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab06
 ```
 Редактирование travis.yml (Записываем язык)
 ```ShellSession
@@ -155,7 +155,7 @@ Description: Second semester of course: Programming Languages
 ToshUxanoff/lab04 (active: no, admin: yes, push: yes, pull: yes)
 Description: ???
 
-ToshUxanoff/lab05 (active: yes, admin: yes, push: yes, pull: yes)
+ToshUxanoff/lab06 (active: yes, admin: yes, push: yes, pull: yes)
 Description: ???
 
 ToshUxanoff/lab1.1 (active: no, admin: yes, push: yes, pull: yes)
@@ -167,10 +167,10 @@ Description: ???
 ToshUxanoff/labs6 (active: no, admin: yes, push: yes, pull: yes)
 Description: ???
 $ travis enable         # "включить" travis в текущей директории
-Detected repository as ToshUxanoff/lab05, is this correct? |yes| 
-ToshUxanoff/lab05: enabled :)
+Detected repository as ToshUxanoff/lab06, is this correct? |yes| 
+ToshUxanoff/lab06: enabled :)
 $ travis whatsup          #показывает пройденные шаги
-ToshUxanoff/lab05 passed: #3
+ToshUxanoff/lab06 passed: #3
 $ travis branches           #показывает сделанные шаги на ветке master 
 master:  #3    passed     added CI
 $ travis history           #показывает всю историю изменений и их состояние   
@@ -179,7 +179,7 @@ $ travis show           #показывает всю информацию
 State:         passed
 Type:          push
 Branch:        master
-Compare URL:   https://github.com/ToshUxanoff/lab05/compare/20b563325bbd...4f0dc1c1
+Compare URL:   https://github.com/ToshUxanoff/lab06/compare/20b563325bbd...4f0dc1c1
 Duration:      29 sec
 Started:       2017-10-06 13:32:24
 Finished:      2017-10-06 13:32:53
